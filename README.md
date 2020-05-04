@@ -69,9 +69,9 @@ printPdf (){
   }
 }
 ```
-### jspdf+html2canvas创建pdf模板(方案一)
+### jspdf+html2canvas创建pdf模板(方案二)
 
-#### 总结
+- 总结
 优点：方便快捷
 缺点：由于使用html2canvas进行截图，出现图片、字体不清晰的情况
 
