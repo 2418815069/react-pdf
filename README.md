@@ -72,7 +72,9 @@ printPdf (){
 ### jspdf+html2canvas创建pdf模板(方案二)
 
 - 总结
+
 优点：方便快捷
+
 缺点：由于使用html2canvas进行截图，出现图片、字体不清晰的情况
 
 ### html2canvas
@@ -140,4 +142,8 @@ export { generatePDF };
 ### jspdf创建pdf模板(方案三)
 - 可以直接使用jspdf生成pdf
   优点：字体清晰
+
   缺点：踩坑最多，且代码冗余复杂，难以维护
+
+### 使用系统提供的打印方法(方案四)
+通过系统提供的window.print()控制打印转化为pdf，打印样式控制需要打印的区域大小，http://www.printcss.com/
