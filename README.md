@@ -1,7 +1,8 @@
 # react-pdf
-
+```
 npm/yarn install
 yarn start
+```
 ### jspdf创建pdf模板
 ## 代码说明
 文档https://react-pdf.org/components，案例 https://github.com/diegomura/react-pdf
@@ -20,6 +21,7 @@ yarn start
 参考pdf-templete/src/pdfTest/PdfTest.jsx
 
 引入PDFDownloadLink组件
+```js
 <PDFDownloadLink document={<MyDocument />} fileName="somename.pdf">
 {({ blob, loading }) => {
   if(blob) {
@@ -28,9 +30,11 @@ yarn start
   return loading ? 'Loading document...' : 'Download now!'
   }}
 </PDFDownloadLink>
-（3）打印PDF
+```
+# 1.打印PDF
 参考pdf-templete/src/pdfTest/PdfTest.jsx
 保存PDFDownloadLink组件中的blob对象，使用blob创建url，把url赋给自己创建的iframe，打印iframe
+```js
 printPdf (){
   if(blobIframe){
     const href = URL.createObjectURL(blobIframe);
@@ -49,3 +53,4 @@ printPdf (){
   frame.src = href;
   }
 }
+```
